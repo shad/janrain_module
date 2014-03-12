@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleShortVersionString</key>
+	<string>v3.6.1</string>
+	<key>JREngage.GitCommit</key>
+	<string>v3.6.1</string>
+	<key>JREngage.CustomInterface</key>
+	<dict>
+		<key>DefaultValues</key>
+		<dict>
+			<key>Authentication.Background.Color.RGBa</key>
+			<array>
+				<real>0.102</real>
+				<real>0.33</real>
+				<real>0.48</real>
+				<real>0.2</real>
+			</array>
+		</dict>
+		<key>CustomValues</key>
+		<dict/>
+	</dict>
+</dict>
+</plist>

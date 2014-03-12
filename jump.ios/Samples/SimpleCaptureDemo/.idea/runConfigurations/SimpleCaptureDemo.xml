@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="SimpleCaptureDemo" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="SimpleCaptureDemo" PROJECT_NAME="SimpleCaptureDemo" TARGET_NAME="SimpleCaptureDemo" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="SimpleCaptureDemo" RUN_TARGET_NAME="SimpleCaptureDemo" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <envs />
+    <RunnerSettings RunnerId="AppRunner" />
+    <ConfigurationWrapper RunnerId="AppRunner" />
+    <method />
+  </configuration>
+</component>
