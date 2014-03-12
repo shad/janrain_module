@@ -9,6 +9,7 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 #import "JRActivityObject.h"
+#import "JREngage+CustomInterface.h"
 
 @implementation ComFoodonthetableJanrainModule
 
@@ -100,7 +101,15 @@
 {
     ENSURE_UI_THREAD_1_ARG(args);
     id provider = [args objectAtIndex:0];
-    [JREngage showAuthenticationDialogForProvider:provider];
+    
+    NSMutableDictionary* myEngageCustomizations = [NSMutableDictionary dictionary];
+    UINavigationController *myNewNav = [[[UINavigationController alloc] init] autorelease];
+    [myNewNav.navigationBar setTintColor:[UIColor redColor]];
+    
+    [myEngageCustomizations setObject:myNewNav forKey:kJRApplicationNavigationController];
+    
+    [JREngage showAuthenticationDialogForProvider:provider
+                     withCustomInterfaceOverrides:myEngageCustomizations];
 }
 
 - (void)authenticationDidReachTokenUrl:(NSString *)tokenUrl withResponse:(NSURLResponse *)response
@@ -205,6 +214,13 @@
 - (void)sharingDidNotComplete
 {
     [self fireEvent:@"share:cancel"];
+}
+
+
+// Logout
+- (void)clearSharingCredentials
+{
+    [JREngage clearSharingCredentialsForAllProviders];
 }
 
 @end
