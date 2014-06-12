@@ -104,9 +104,16 @@
     
     NSMutableDictionary* myEngageCustomizations = [NSMutableDictionary dictionary];
     UINavigationController *myNewNav = [[[UINavigationController alloc] init] autorelease];
-    [myNewNav.navigationBar setTintColor:[UIColor redColor]];
+    myNewNav.navigationBar.tintColor=[UIColor whiteColor];
+    myNewNav.navigationBar.barTintColor = [UIColor colorWithRed:0.878 green:0.325 blue:0.282 alpha:1]; /*#e05348*/
+    myNewNav.navigationBar.translucent = NO;
+    myNewNav.navigationBar.barStyle = UIBarStyleBlack;
     
-    [myEngageCustomizations setObject:myNewNav forKey:kJRApplicationNavigationController];
+    
+    [myEngageCustomizations setObject:myNewNav forKey:kJRCustomModalNavigationController];
+    [myEngageCustomizations setObject:[UIColor colorWithRed:0.965 green:0.965 blue:0.965 alpha:1.0]
+                               forKey:kJRAuthenticationBackgroundColor];
+
     
     [JREngage showAuthenticationDialogForProvider:provider
                      withCustomInterfaceOverrides:myEngageCustomizations];

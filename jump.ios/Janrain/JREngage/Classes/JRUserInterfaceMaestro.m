@@ -902,7 +902,7 @@ static JRUserInterfaceMaestro *singleton = nil;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:root];
     [navigationController autorelease];
     navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    navigationController.navigationBar.clipsToBounds = YES;
+    //navigationController.navigationBar.clipsToBounds = YES;
 
     navigationController.view.autoresizingMask =
             UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin
@@ -974,7 +974,7 @@ static JRUserInterfaceMaestro *singleton = nil;
     if (usingCustomNav)
     {
         jrModalViewController.myNavigationController = customModalNavigationController;
-        jrModalViewController.myNavigationController.navigationBar.clipsToBounds = YES;
+//        jrModalViewController.myNavigationController.navigationBar.clipsToBounds = YES;
         jrModalViewController.myNavigationController.view.autoresizingMask =
                 UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin
                 | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
