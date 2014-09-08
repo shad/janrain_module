@@ -1,9 +1,10 @@
 # JanRain in Titanium
 
-!!USE AT YOUR OWN PERIL!!
+!! USE AT YOUR OWN PERIL !!
 
 I'm using this in production, but I make no assurances that this will work
-in your specific case.
+in your specific case. JanRain is suprisingly complex to get working just
+right, so this module is here as information to others only.
 
 ## Modified JanRain Source
 

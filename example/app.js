@@ -1,6 +1,5 @@
-// TODO: write your module tests here
 var janrain = require('com.foodonthetable.janrain');
-janrain.initWithAppId("chfimhkohadheajhnbin");
+janrain.initWithAppId("aaaaaaaaaaaaaaaaaaaa");
 
 janrain.addEventListener("auth:success", function (event) {
   Ti.API.info("auth:success");
@@ -76,16 +75,16 @@ share.addEventListener('click', function () {
   janrain.socialShare({
     action:"shared a recipe.",
     userGeneratedContent:"I really liked this thing!",
-    url:"http://food.com/recipes/1234",
+    url:"http://foo.com/recipes/1234",
     email: {
       subject:"Nice Recipe!",
       messageBody:"Check out this recipe: http://food.com/recipes/1234",
       isHTML:false,
-      urls:["http://food.com/recipes/1234"]
+      urls:["http://foo.com/recipes/1234"]
     },
     sms: {
       message:"Check out this recipe: http://food.com/recipes/1234",
-      urls:["http://food.com/recipes/1234"]
+      urls:["http://foo.com/recipes/1234"]
     }
   });
 });
