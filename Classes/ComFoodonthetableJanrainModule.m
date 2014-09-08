@@ -10,8 +10,59 @@
 #import "TiUtils.h"
 #import "JRActivityObject.h"
 #import "JREngage+CustomInterface.h"
+#import "TiApp.h"
+#import "JRSwizzle.h"
+#import <FacebookSDK/FacebookSDK.h>
+
+
+
+/* Take over applicationDidBecomeActive */
+@implementation TiApp (JanRainModule)
+- (void)jrmodApplicationDidBecomeActive:(UIApplication *)application
+{
+    NSLog(@"[INFO] ------------------ JanRainModule#applicationDidBecomeActive -----------------");
+    [self jrmodApplicationDidBecomeActive:application];
+    
+    // Activate Facebook Settings
+    [FBSettings setDefaultAppID:@"229806363769"];
+    [FBAppEvents activateApp];
+    
+    [JREngage applicationDidBecomeActive:application];
+}
+
+- (BOOL)jrmodApplication:(UIApplication *)application
+                 openURL:(NSURL *)url
+       sourceApplication:(NSString *)sourceApplication
+              annotation:(id)annotation
+{
+    [self jrmodApplication:application openURL:url sourceApplication:sourceApplication
+                annotation:annotation];
+    return [JREngage application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+@end
+
+
+
 
 @implementation ComFoodonthetableJanrainModule
+
++ (void)load {
+    NSError *error = nil;
+    [TiApp jr_swizzleMethod:@selector(applicationDidBecomeActive:)
+                 withMethod:@selector(jrmodApplicationDidBecomeActive:)
+                      error:&error];
+    if(error)
+        NSLog(@"[WARN] Cannot swizzle applicationDidBecomeActive: %@", error);
+
+    
+    [TiApp jr_swizzleMethod:@selector(application:openURL:sourceApplication:annotation:)
+                 withMethod:@selector(jrmodApplication:openURL:sourceApplication:annotation:)
+                      error:&error];
+    
+    if(error)
+        NSLog(@"[WARN] Cannot swizzle application:openURL:sourceApplication:annotation: %@", error);
+    
+}
 
 #pragma mark Internal
 

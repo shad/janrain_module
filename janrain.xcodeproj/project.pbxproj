@@ -92,6 +92,9 @@
 		28BC652618ADD112008FC328 /* JRPublishActivityController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286161C618ADC4720054847C /* JRPublishActivityController.xib */; };
 		28BC652718ADD112008FC328 /* JRUserLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286161C718ADC4720054847C /* JRUserLandingController.xib */; };
 		28BC652818ADD112008FC328 /* JRWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286161C818ADC4720054847C /* JRWebViewController.xib */; };
+		28BD8F9C19A2B17400C209ED /* JRSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 28BD8F9A19A2B17400C209ED /* JRSwizzle.h */; };
+		28BD8F9D19A2B17400C209ED /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BD8F9B19A2B17400C209ED /* JRSwizzle.m */; };
+		28BD8F9F19A2B30300C209ED /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BD8F9E19A2B30300C209ED /* FacebookSDK.framework */; };
 		AA747D9F0F9514B9006C5449 /* ComFoodonthetableJanrain_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComFoodonthetableJanrain_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -348,6 +351,9 @@
 		286161C818ADC4720054847C /* JRWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JRWebViewController.xib; sourceTree = "<group>"; };
 		286161CA18ADC4720054847C /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
 		286161CB18ADC4720054847C /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		28BD8F9A19A2B17400C209ED /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = Classes/JRSwizzle.h; sourceTree = "<group>"; };
+		28BD8F9B19A2B17400C209ED /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = Classes/JRSwizzle.m; sourceTree = "<group>"; };
+		28BD8F9E19A2B30300C209ED /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = /Users/sreynolds/fott/mobile/frameworks/FacebookSDK.framework; sourceTree = "<absolute>"; };
 		AA747D9E0F9514B9006C5449 /* ComFoodonthetableJanrain_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComFoodonthetableJanrain_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComFoodonthetableJanrain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComFoodonthetableJanrain.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -363,6 +369,7 @@
 				28615E2C18AD83900054847C /* Accounts.framework in Frameworks */,
 				28615E2A18AD83810054847C /* MessageUI.framework in Frameworks */,
 				28615E2818AD83790054847C /* QuartzCore.framework in Frameworks */,
+				28BD8F9F19A2B30300C209ED /* FacebookSDK.framework in Frameworks */,
 				28615E2618AD83720054847C /* Security.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
@@ -394,6 +401,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28BD8F9E19A2B30300C209ED /* FacebookSDK.framework */,
 				286160D018AD90E00054847C /* UIKit.framework */,
 				28615E2D18AD83960054847C /* Social.framework */,
 				28615E2B18AD83900054847C /* Accounts.framework */,
@@ -408,6 +416,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				28BD8F9A19A2B17400C209ED /* JRSwizzle.h */,
+				28BD8F9B19A2B17400C209ED /* JRSwizzle.m */,
 				24DE9E0F11C5FE74003F90F6 /* ComFoodonthetableJanrainModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* ComFoodonthetableJanrainModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* ComFoodonthetableJanrainModule.h */,
@@ -843,6 +853,7 @@
 				286161DE18ADC4720054847C /* JREngage.h in Headers */,
 				286161FD18ADC4720054847C /* JRUserLandingController.h in Headers */,
 				286161F518ADC4720054847C /* JRProvidersController.h in Headers */,
+				28BD8F9C19A2B17400C209ED /* JRSwizzle.h in Headers */,
 				286161EF18ADC4720054847C /* JRNativeProvider.h in Headers */,
 				24DD6CF91134B3F500162E58 /* ComFoodonthetableJanrainModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComFoodonthetableJanrainModuleAssets.h in Headers */,
@@ -956,6 +967,7 @@
 				286161F618ADC4720054847C /* JRProvidersController.m in Sources */,
 				286161EC18ADC4720054847C /* JRNativeFacebook.m in Sources */,
 				286161F818ADC4720054847C /* JRPublishActivityController.m in Sources */,
+				28BD8F9D19A2B17400C209ED /* JRSwizzle.m in Sources */,
 				286161DF18ADC4720054847C /* JREngage.m in Sources */,
 				286161D518ADC4720054847C /* NSURLRequest+JRQueryParams.m in Sources */,
 				286161FC18ADC4720054847C /* JRUserInterfaceMaestro.m in Sources */,
@@ -991,6 +1003,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/ComFoodonthetableJanrain.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sreynolds/fott/mobile/frameworks,
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1028,6 +1044,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DSTROOT = /tmp/ComFoodonthetableJanrain.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sreynolds/fott/mobile/frameworks,
+				);
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

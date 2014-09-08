@@ -10,6 +10,8 @@
 	<string>janrain</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>28F7046F-9D38-4CD4-91DD-621787B87D2F</key>
+		<string>ssh://github.com/rossofoodco/mobile.git</string>
 		<key>86E466A5-6883-424B-ABA4-9CE0C4E1E528</key>
 		<string>ssh://github.com/janrain/jump.ios.git</string>
 		<key>9E6C1033-4DE5-4425-BB41-84564FF5D0E7</key>
@@ -19,6 +21,8 @@
 	<string>janrain.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>28F7046F-9D38-4CD4-91DD-621787B87D2F</key>
+		<string>../../../mobile</string>
 		<key>86E466A5-6883-424B-ABA4-9CE0C4E1E528</key>
 		<string>../../jump.ios</string>
 		<key>9E6C1033-4DE5-4425-BB41-84564FF5D0E7</key>
@@ -47,6 +51,14 @@
 			<string>86E466A5-6883-424B-ABA4-9CE0C4E1E528</string>
 			<key>IDESourceControlWCCName</key>
 			<string>jump.ios</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>28F7046F-9D38-4CD4-91DD-621787B87D2F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mobile</string>
 		</dict>
 	</array>
 </dict>

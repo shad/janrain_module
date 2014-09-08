@@ -97,7 +97,16 @@
         objc_msgSend(
                 fbSession,
                 NSSelectorFromString(@"openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:"),
-                @[], YES, handler);
+                @[
+                @"public_profile",
+                @"email",
+                @"user_friends",
+                @"user_about_me",
+                @"user_birthday",
+                @"user_location",
+                @"user_photos",
+                @"read_friendlists"
+                ], YES, handler);
     }
 }
 

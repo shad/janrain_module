@@ -10,7 +10,7 @@
 //
 // How to add a Framework (example)
 //
-OTHER_LDFLAGS=$(inherited) -framework Security -framework Social -framework Accounts -framework MessageUI -framework QuartzCore
+OTHER_LDFLAGS=$(inherited) -framework Security -framework Social -framework Accounts -framework MessageUI -framework QuartzCore -framework FacebookSDK
 
 
 //

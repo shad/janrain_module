@@ -1,1 +1,22 @@
 JanRain integration for jump.ios
+
+NOTE: JanRain source was modified to ask for the correct permissions.
+If you upgrade JanRain, be sure to include these permissions or you
+will break facebook!!!
+
+Check out near the bottom of JRNativeFacebook.m and add the privileges
+as below.
+
+    objc_msgSend(
+            fbSession,
+            NSSelectorFromString(@"openActiveSessionWithReadPermissions:allowLoginUI:completionHandler:"),
+            @[
+            @"public_profile",
+            @"email",
+            @"user_friends",
+            @"user_about_me",
+            @"user_birthday",
+            @"user_location",
+            @"user_photos",
+            @"read_friendlists"
+            ], YES, handler);
