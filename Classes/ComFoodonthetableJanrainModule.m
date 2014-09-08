@@ -22,11 +22,6 @@
 {
     NSLog(@"[INFO] ------------------ JanRainModule#applicationDidBecomeActive -----------------");
     [self jrmodApplicationDidBecomeActive:application];
-    
-    // Activate Facebook Settings
-    [FBSettings setDefaultAppID:@"229806363769"];
-    [FBAppEvents activateApp];
-    
     [JREngage applicationDidBecomeActive:application];
 }
 
@@ -40,8 +35,6 @@
     return [JREngage application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 @end
-
-
 
 
 @implementation ComFoodonthetableJanrainModule
